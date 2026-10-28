@@ -1,0 +1,21 @@
+style_id,style_name,category,mrp_aed,liquidation_floor_aed
+S01,Metro Runner,men,349,130
+S02,Court Classic,men,299,110
+S03,Trail Lite,men,399,150
+S04,Urban Knit,men,329,120
+S05,Canvas Low,men,199,75
+S06,Retro Hi,men,379,169
+S07,Slip-On Mesh,men,249,90
+S08,Pace Pro,men,429,160
+S09,Cloud Step,women,299,110
+S10,Studio Flex,women,279,99
+S11,Platform Lo,women,319,115
+S12,Daily Glide,women,259,95
+S13,Ballet Knit,women,229,85
+S14,Street Mule,women,289,105
+S15,Breeze Runner,women,339,125
+S16,Junior Dash,kids,179,65
+S17,Velcro Pop,kids,149,55
+S18,Light-Up Lo,kids,199,72
+S19,Mini Trek,kids,169,55
+S20,School Day,kids,159,58

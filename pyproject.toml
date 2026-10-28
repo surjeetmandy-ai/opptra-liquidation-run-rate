@@ -1,0 +1,50 @@
+[project]
+name = "opptra-liquidation"
+version = "0.1.0"
+description = "Daily price / ads / exit decisions for clearing end-of-season sneaker stock on Amazon.ae and Noon before a jobber deadline"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.32",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "openpyxl>=3.1",
+    "pydantic-settings>=2.4",
+    "anthropic>=1.0",  # the brief's one LLM call; 1.0+ has output_config (structured outputs, effort)
+    "typing-extensions>=4.6",
+]
+
+[build-system]
+# Lets `pip install -e .` read the dependencies above, so pyproject.toml is the only list of them.
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["engine"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["tools/*.csv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM", "D1"]  # D1: every public module, class and function has a docstring
+ignore = [
+    "E501",   # long lines in reason strings are deliberate
+    "SIM108", # ternaries are not always clearer
+    "B008",   # dataclass field defaults
+    "D105", "D107",    # magic methods and __init__ explain themselves
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["N802", "B011", "D1"]  # test names are the documentation
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,10 @@
+# Streamlit reads this automatically when you run `streamlit run app.py` from this folder.
+
+[server]
+# Don't ask for an email address in the terminal on first run (it waits for input).
+# Open http://localhost:8501 yourself.
+headless = true
+
+[browser]
+# Don't send Streamlit usage statistics.
+gatherUsageStats = false

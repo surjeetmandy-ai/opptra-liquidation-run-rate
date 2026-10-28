@@ -1,0 +1,14 @@
+state.json
+__pycache__/
+*.pyc
+.env
+.DS_Store
+tools/next_day.csv
+.venv/
+
+.pytest_cache/
+.ruff_cache/
+uv.lock.tmp
+*.egg-info/
+build/
+.session/
